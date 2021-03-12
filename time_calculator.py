@@ -38,9 +38,7 @@ def add_time(start, duration, day = 'default'):
         end_period = period[0]
     else:
         end_period = period[1]
-
-    #print (start_hour, end_hour, final_hour, num_of_12h_period, start_period[1], end_period)
-   
+       
     # Calculate number of days later
     no_of_days = int(end_hour/24)
     if no_of_days < 1:
@@ -49,10 +47,8 @@ def add_time(start, duration, day = 'default'):
         no_of_days = ' (next day)'
     elif no_of_days > 1:
         no_of_days = ' ('+ str(no_of_days) +' days later)'
-    
-   
+       
     if day == 'default':
-        #print (str(final_hour) + ':' + (final_minutes) + " " + (end_period) + (no_of_days) )
         return (str(final_hour) + ':' + (final_minutes) + " " + (end_period) + (no_of_days) )
 
     start_count = 0
@@ -77,5 +73,4 @@ def add_time(start, duration, day = 'default'):
 
         final_day = day_of_week_count.get(final_count)
 
-        #print (str(final_hour) + ':' + (final_minutes) + " " + (end_period) +", " + (final_day) + (no_of_days) )
         return (str(final_hour) + ':' + (final_minutes) + " " + (end_period) +", " + (final_day) + (no_of_days) )
